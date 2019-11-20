@@ -20,9 +20,9 @@ CREATE: Регистрация нового пользователя
 *данные необходимо ввести в  `body` в программе Postman*
 ```json
 {
-login: "ego@yandex.ru",
-password: "selfish",
-access: "noob" //  или "root" 
+"login": "ego@yandex.ru",
+"password": "selfish", 
+"access": "noob" //  или "root" 
 }
 ```
 
@@ -54,9 +54,9 @@ UPDATE: Изменение данных пользователя
 
 ```json
 {
-login: "ego@yandex.ru",
-password: "selfish", 
-access: "noob" //  или "root" 
+"login": "ego@yandex.ru",
+"password": "selfish", 
+"access": "noob" //  или "root" 
 }
 ```
 
