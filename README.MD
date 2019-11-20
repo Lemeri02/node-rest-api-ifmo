@@ -1,6 +1,6 @@
 # Проектирование REST API
 
-
+*Node.js, MongoDB, Mongoose*
 
 ## Доступные API:
 
