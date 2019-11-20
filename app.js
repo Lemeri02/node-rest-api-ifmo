@@ -34,7 +34,7 @@ app.use(passport.session())
 require('./config/passport')(passport);
 
 app.get('/', (req, res) => {
-  res.send('Invalid endpoint');
+  res.send('Invalid endpoint, см. README в Гитхаб');
 });
 
 app.listen(port, () => {
