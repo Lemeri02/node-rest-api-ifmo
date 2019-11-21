@@ -4,6 +4,7 @@
 
 ## Доступные API:
 
+[![Видео](https://img.youtube.com/vi/QCDCzs6zZzE/0.jpg)](https://www.youtube.com/watch?v=QCDCzs6zZzE)
 
 
 CREATE, UPDATE, DELETE - доступен пользователю `prof@univer.msk.ru` паролем `fessor` с правами `root`

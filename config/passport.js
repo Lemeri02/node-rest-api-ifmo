@@ -9,13 +9,11 @@ module.exports = async (passport) => {
   opts.secretOrKey = config.secret;
   passport.use(new JwtStrategy(opts, (jwt_payload, done) => {
     User.getUserByPassword(jwt_payload.user, (err, user) => {
-       
       if(err){
         return done(err, false);
       }
       if(user){
         return done(null, user);
-        console.log("----pasport",user)
       } else {
         return done(null, false);
       }

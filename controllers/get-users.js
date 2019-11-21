@@ -9,14 +9,3 @@ module.exports = async (req, res) => {
     return res.json({success: false, msg: 'User not found'});
   }
 };
-
-/* router.get('/', (req, res, next) => {
-  User.getUsers(req, (err, user) => {
-   if(err) throw err;
-   if(user){
-     res.json(user)
-   } else{
-       return res.json({success: false, msg: 'User not found'});
-     }
- });
-}); */

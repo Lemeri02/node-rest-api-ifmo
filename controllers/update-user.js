@@ -32,21 +32,3 @@ module.exports = async (req, res, next) => {
     return res.json({success: false, msg: 'User not found'});
   } 
 };
-
-
-/* router.put('/:login', passport.authenticate('jwt', {session: false}), (req, res, next) => {
-  const { login } = req.params;
-  const { password } = req.body;
-  const authorizedUserAccess = req.user.access;
-
-  User.getUserByUsername(login, (err, user) => {
-    if(user && authorizedUserAccess == 'root'){
-      user.password = password;
-      User.updateUser(user, (er, updatedUser) =>{
-        res.json({success: true, updatedUser});
-      })
-    } else {
-      return res.json({success: false, msg: 'User not found'});
-    }
-  });
-}) */
