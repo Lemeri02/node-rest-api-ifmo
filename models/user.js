@@ -18,37 +18,19 @@ const UserSchema = new mongoose.Schema({
 
 const User = module.exports = mongoose.model('User', UserSchema);
 
-module.exports.getUserById = function(id, callback){
+/* module.exports.getUserById = function(id, callback){
   User.findById(id, callback);
-};
+}; */
 
-module.exports.getUserByUsername = function(login, callback){
+/* module.exports.getUserByUsername = function(login, callback){
   const query = { login: login}
   User.findOne(query, callback);
 };
-
-module.exports.getUserByPassword = function(password, callback){
+ */
+module.exports.getUserByPassword = async function(password, callback){
   const query = { password: password}
-  User.findOne(query, callback);
+  await User.findOne(query, callback);
 };
-
-module.exports.deleteUser = function(login, callback){
-  const query = { login: login}
-  User.deleteOne(query, callback);
-};
- 
-module.exports.getUsers = function(login, callback){
-  User.find(callback);
-};
-
-module.exports.updateUser = function(updatedUser, callback){
-  updatedUser.save(callback);
-};
-
-module.exports.addUser = function(newUser, callback){
-      newUser.save(callback);
-};
-
 module.exports.comparePassword = function(candidatePassword, hash, callback){
   bcrypt.hash(candidatePassword, salt, function(err, hash){
      bcrypt.compare(candidatePassword, hash, (err, isMatch) => {
@@ -57,3 +39,20 @@ module.exports.comparePassword = function(candidatePassword, hash, callback){
   });
   });
 };
+/* module.exports.deleteUser = async function(login, callback){
+  const query = { login: login}
+  console.log('---deleteUser', query)
+  await User.deleteOne(query, callback);
+};
+  */
+/* module.exports.getUsers = async function(login, callback){
+  await User.find(callback);
+}; */
+
+/* module.exports.updateUser = function(updatedUser, callback){
+  updatedUser.save(callback);
+}; */
+
+/* module.exports.addUser = function(newUser, callback){
+      newUser.save(callback);
+}; */
