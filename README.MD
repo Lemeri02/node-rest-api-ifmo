@@ -35,7 +35,7 @@ CREATE, UPDATE, DELETE - доступен пользователю `prof@univer.
 [79.143.31.227:3001/users/profile](http://79.143.31.227:3001/users/profile)
 
 
-методом: `POST`
+методом: `GET`
 
 Если все успешно, то Postman выдаст информацию о пользователе, в противном случае Postman выдаст: `Unauthorized`
 
